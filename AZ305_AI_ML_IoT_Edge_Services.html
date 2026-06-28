@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AZ-305 - AI, Machine Learning and IoT/Edge Services in Azure</title>
+<style>
+body{font-family:Segoe UI,Arial,sans-serif;background:#f5f7fb;color:#222;max-width:1100px;margin:auto;padding:30px;line-height:1.7}
+h1,h2{color:#0078D4}
+.card{background:#fff;border-radius:10px;padding:18px;margin:18px 0;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+table{width:100%;border-collapse:collapse}
+th,td{border:1px solid #ccc;padding:10px}
+th{background:#0078D4;color:#fff}
+pre{background:#eef6ff;padding:12px;border-radius:6px;overflow:auto}
+.tip{background:#fff8d5;border-left:5px solid #ffb900;padding:12px}
+</style>
+</head>
+<body>
+<h1>Describe AI, Machine Learning and IoT/Edge Services in Azure</h1>
+
+<div class="card">
+<h2>Overview</h2>
+<p>Azure offers intelligent services so you don't have to build everything from scratch.</p>
+<pre>
+Need pre-built AI?      → Azure AI Services
+Need Generative AI?     → Azure OpenAI Service
+Need custom AI models?  → Azure Machine Learning
+Need connected devices? → Azure IoT Services
+</pre>
+</div>
+
+<div class="card">
+<h2>Azure AI Services</h2>
+<p>Ready-made AI capabilities exposed through APIs. No model training required.</p>
+<ul>
+<li>Vision - Analyze images</li>
+<li>Speech - Speech ↔ Text</li>
+<li>Language - Translation, sentiment analysis</li>
+<li>Document Intelligence - Extract information from forms and PDFs</li>
+</ul>
+<h3>Example</h3>
+<pre>
+Passport Image
+      ↓
+Azure AI Document Intelligence
+      ↓
+Extract Name, DOB, Passport Number
+</pre>
+</div>
+
+<div class="card">
+<h2>Azure OpenAI Service</h2>
+<p>Provides Generative AI models for chat, content generation, summaries and code generation with Azure security and governance.</p>
+<pre>
+User Prompt
+      ↓
+Azure OpenAI
+      ↓
+Chat • Code • Summary • Email • Content
+</pre>
+</div>
+
+<div class="card">
+<h2>Agentic AI</h2>
+<p>Agentic AI is an <b>application pattern</b>, not a separate Azure service. It combines AI models, instructions, context and tools to accomplish multi-step goals.</p>
+<pre>
+User Request
+      ↓
+AI Understands Goal
+      ↓
+Search Database
+      ↓
+Call APIs
+      ↓
+Generate Response
+      ↓
+Complete Task
+</pre>
+<p><b>Example:</b> "Book my flight" → Search flights → Compare prices → Book ticket → Email confirmation.</p>
+</div>
+
+<div class="card">
+<h2>Azure Machine Learning</h2>
+<p>Used when you need to build, train, deploy and manage your own machine learning models.</p>
+<pre>
+Training Data
+      ↓
+Train Model
+      ↓
+Deploy Model
+      ↓
+Predictions
+</pre>
+<p><b>Example:</b> Train a fraud detection model using your company's transaction history.</p>
+</div>
+
+<div class="card">
+<h2>Azure IoT Services</h2>
+<h3>IoT Hub</h3>
+<p>Secure bi-directional communication between devices and Azure.</p>
+<h3>IoT Central</h3>
+<p>A SaaS platform for quickly building IoT solutions with dashboards and device management.</p>
+<h3>IoT Edge</h3>
+<p>Runs workloads close to devices for faster local processing.</p>
+
+<pre>
+Sensors
+   ↓
+IoT Hub
+   ↓
+Cloud Analytics
+   ↓
+Model Updates
+   ↓
+IoT Edge
+   ↓
+Local Processing
+</pre>
+</div>
+
+<div class="card">
+<h2>Comparison</h2>
+<table>
+<tr><th>Service</th><th>Use When</th><th>Example</th></tr>
+<tr><td>Azure AI Services</td><td>Need pre-built AI APIs</td><td>OCR, Translation, Vision</td></tr>
+<tr><td>Azure OpenAI</td><td>Need Generative AI</td><td>Chatbot, Content Generation</td></tr>
+<tr><td>Azure Machine Learning</td><td>Need custom ML models</td><td>Fraud Detection</td></tr>
+<tr><td>Azure IoT Hub</td><td>Connect devices</td><td>Factory Sensors</td></tr>
+<tr><td>Azure IoT Central</td><td>Quick IoT solution</td><td>Monitoring Dashboard</td></tr>
+<tr><td>Azure IoT Edge</td><td>Process data near devices</td><td>Factory Camera AI</td></tr>
+</table>
+</div>
+
+<div class="tip">
+<h2>AZ-305 Decision Tree</h2>
+<pre>
+Need pre-built AI?      → Azure AI Services
+Need ChatGPT-like AI?   → Azure OpenAI
+Need to train AI?       → Azure Machine Learning
+Need connected devices? → Azure IoT Services
+Need local processing?  → Azure IoT Edge
+</pre>
+</div>
+
+</body></html>

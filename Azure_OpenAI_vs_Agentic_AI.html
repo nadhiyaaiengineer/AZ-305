@@ -1,0 +1,60 @@
+
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Azure OpenAI vs Agentic AI</title>
+<style>
+body{font-family:Arial;max-width:950px;margin:40px auto;line-height:1.6}
+h1,h2{color:#0066cc}table{border-collapse:collapse;width:100%}
+th,td{border:1px solid #ccc;padding:8px}pre{background:#f5f5f5;padding:10px;border-radius:6px}
+.note{background:#eef8ff;border-left:4px solid #06c;padding:10px}
+</style></head><body>
+<h1>Azure OpenAI Service vs Agentic AI</h1>
+<p><b>Key idea:</b> Azure OpenAI is the <b>brain</b>. Agentic AI is the <b>assistant</b> that uses the brain plus tools.</p>
+
+<h2>Azure OpenAI Service</h2>
+<p>Generates text, code, summaries and answers from prompts.</p>
+<pre>You → Prompt → Azure OpenAI → Response</pre>
+<ul>
+<li>Write an email</li>
+<li>Generate Python code</li>
+<li>Summarize a document</li>
+<li>Answer questions</li>
+</ul>
+
+<h2>Agentic AI</h2>
+<p>An application pattern where an AI model reasons, uses tools and APIs, and completes a multi-step task.</p>
+<pre>User Request
+    ↓
+Understand Goal
+    ↓
+Call APIs / Search DB
+    ↓
+Reason About Results
+    ↓
+Perform Actions
+    ↓
+Final Response</pre>
+
+<h2>Flight Booking Example</h2>
+<table>
+<tr><th>Azure OpenAI</th><th>Agentic AI</th></tr>
+<tr><td>"Here are some airlines you can check."</td>
+<td>Search flights → Compare prices → Book ticket → Send confirmation email.</td></tr>
+</table>
+
+<h2>HR Leave Example</h2>
+<table>
+<tr><th>Azure OpenAI</th><th>Agentic AI</th></tr>
+<tr><td>Explains how to apply for leave.</td>
+<td>Checks leave balance, submits request, updates calendar, sends confirmation.</td></tr>
+</table>
+
+<h2>Comparison</h2>
+<table>
+<tr><th>Azure OpenAI Service</th><th>Agentic AI</th></tr>
+<tr><td>AI service</td><td>Application pattern</td></tr>
+<tr><td>Single prompt → response</td><td>Multiple steps</td></tr>
+<tr><td>Generates content</td><td>Uses tools and APIs</td></tr>
+<tr><td>Doesn't perform business actions by itself</td><td>Completes business workflows</td></tr>
+</table>
+
+<div class="note"><b>AZ-305 Tip:</b> If the question is about generating content, choose <b>Azure OpenAI Service</b>. If it's about completing tasks using AI plus APIs/tools/workflows, think <b>Agentic AI</b>.</div>
+</body></html>
