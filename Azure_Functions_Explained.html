@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html><head><meta charset='utf-8'><title>Azure Functions Explained</title>
+<style>
+body{font-family:Arial,sans-serif;max-width:900px;margin:40px auto;line-height:1.6}
+h1,h2{color:#0a5}
+pre{background:#f4f4f4;padding:10px;border-radius:6px}
+table{border-collapse:collapse;width:100%}td,th{border:1px solid #ccc;padding:8px}
+.note{background:#eef;padding:10px;border-left:4px solid #36c}
+</style></head><body>
+<h1>Azure Functions - Simple Explanation</h1>
+<p><b>Definition:</b> Azure Functions is a <b>serverless, event-driven</b> compute service. Your code runs only when an event occurs and stops when finished.</p>
+
+<h2>Restaurant Analogy</h2>
+<p>Instead of keeping an employee working all day, the employee starts only when a customer arrives, finishes the work, and goes home.</p>
+<pre>Customer Arrives
+      ↓
+Employee Starts Working
+      ↓
+Work Completed
+      ↓
+Employee Goes Home</pre>
+
+<h2>Traditional VM vs Azure Function</h2>
+<table>
+<tr><th>Virtual Machine</th><th>Azure Function</th></tr>
+<tr><td>Runs 24×7</td><td>Runs only when triggered</td></tr>
+<tr><td>Pay while VM runs</td><td>Pay only while code executes</td></tr>
+<tr><td>You manage OS</td><td>Azure manages infrastructure</td></tr>
+<tr><td>Manual scaling</td><td>Automatic scaling</td></tr>
+</table>
+
+<h2>What is an Event?</h2>
+<ul>
+<li>HTTP Request</li>
+<li>Blob/File Upload</li>
+<li>Timer</li>
+<li>Queue Message</li>
+<li>Service Bus Message</li>
+<li>Database Change</li>
+</ul>
+
+<h2>Example: Image Upload</h2>
+<pre>User Uploads Image
+      ↓
+Azure Blob Storage
+      ↓
+Azure Function Triggered
+      ↓
+Resize Image
+      ↓
+Save Thumbnail
+      ↓
+Function Stops</pre>
+
+<h2>Scaling</h2>
+<pre>10 Requests → 1 Function
+100 Requests → 5 Functions
+10,000 Requests → Many Functions
+Traffic Drops → Extra Functions Removed</pre>
+
+<h2>Stateless vs Stateful</h2>
+<table>
+<tr><th>Stateless</th><th>Stateful (Durable Functions)</th></tr>
+<tr><td>Every execution is independent.</td><td>Remembers previous steps.</td></tr>
+<tr><td>Good for APIs.</td><td>Good for long-running workflows.</td></tr>
+</table>
+
+<h2>Azure Functions vs Azure Container Apps</h2>
+<table>
+<tr><th>Azure Functions</th><th>Azure Container Apps</th></tr>
+<tr><td>Runs individual functions</td><td>Runs complete containerized apps</td></tr>
+<tr><td>Event-driven</td><td>Container-based microservices</td></tr>
+<tr><td>Great for short tasks</td><td>Great for APIs & apps</td></tr>
+</table>
+
+<div class='note'>
+<b>AZ-305 Exam Tip:</b> If the question mentions <i>serverless, event-driven, pay only when code runs, HTTP/Blob/Timer triggers, automatic scaling</i>, think <b>Azure Functions</b>.
+</div>
+</body></html>
